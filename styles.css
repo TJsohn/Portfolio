@@ -326,6 +326,7 @@ section:first-child {
   width: 90%;
   max-width: 1200px;
   z-index: 2;
+  min-height: 50px;
 }
 
 .hero-text h1 {
@@ -493,9 +494,8 @@ section:first-child {
 
 .project-card img {
   width: 100%;
-  height: height;
-  object-fit: cover;
-  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 .project-card h3 {
