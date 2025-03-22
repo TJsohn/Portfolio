@@ -8,6 +8,14 @@ const menu = document.querySelector("#menu");
 const themeToggle = document.getElementById("theme-toggle");
 const hero = document.getElementById("hero");
 
+window.addEventListener("load", function () {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href =
+    "https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap";
+  document.head.appendChild(link);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopBtn = document.querySelector("#backToTopBtn");
 
