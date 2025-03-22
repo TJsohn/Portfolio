@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>TJ Sohn - Developer & Problem Solver</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon1.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">TJ Sohn</a></h1>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle">Dark 🌙</button>
+
+      <button id="menu-toggle" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>Hello, I'm TJ Sohn</h1>
+              <p>a Full Stack Web Developer</p>
+              <button class="modalBtn">Let's Connect</button>
+            </div>
+            <div class="hero-image"></div>
+          </div>
+        </div>
+
+        <div class="modal">
+          <div class="icon-container">
+            <a
+              href="https://www.linkedin.com/in/taejeong-tj-sohn-22137919/"
+              target="_blank"
+              class="fa fa-linkedin"
+              style="font-size: 40px"
+            ></a>
+            <a
+              href="https://github.com/TJsohn"
+              target="_blank"
+              class="fa fa-github"
+              style="font-size: 40px"
+            ></a>
+          </div>
+          <div class="mail-container">
+            <a href="mailto:sohntaejeong@gmail.com" class="maillink"
+              >sohntaejeong@gmail.com</a
+            ><i class="material-icons" style="font-size: 36px">email</i>
+          </div>
+          <button class="modalCloseBtn">Close</button>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="projects-container">
+          <h2>Projects</h2>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="project1.png" alt="Project 1" />
+              <h3>Portfolio</h3>
+              <a href="#">See more</a>
+            </div>
+            <div class="project-card">
+              <img src="project2.png" alt="Project 2" />
+              <h3>Pancake order</h3>
+              <a href="#">See more</a>
+            </div>
+            <div class="project-card">
+              <img src="project3.png" alt="Project 3" />
+              <h3>Log in</h3>
+              <a href="#">See more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="about-content">
+          <div class="text">
+            <h2>About Me</h2>
+            <p>
+              I'm TJ Sohn, a full-stack web developer passionate about creating
+              dynamic web experiences. As a passionate web developer with a keen
+              eye for detail and a robust background in business and public
+              international area, I thrive on solving complex problems by
+              crafting innovative solutions. I have honed my expertise in
+              Javascript and React along with a variety of modern technologies
+              through an internship and tackling diverse freelance projects.
+              With a dedication to continuous learning and a commitment to
+              excellence, I transform ideas into efficient and user-friendly
+              applications.
+            </p>
+          </div>
+          <img
+            src="profile.jpg"
+            sizes="(max-width:600px)100vw, (max-width:1200px)50vw, 33vw"
+            alt="Profile Image"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="contact-form" id="contact">
+        <h2>Contact me</h2>
+        <form action="#" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
+      <h3>Copyright © 2025 TJ Sohn. All rights reserved.</h3>
+      <button id="backToTopBtn" class="hidden">Back to top</button>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
