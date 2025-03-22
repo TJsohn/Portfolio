@@ -6,7 +6,7 @@ This is the project submission at the end of the course of HTML/CSS, REACT25K fr
 
 Portfolio page – A fully functional website with well-structured code.
 
-Our task is to create a personal portfolio website that showcases my work and skills using HTML, CSS, and JavaScript. This is my chance to build a site that reflects my style—your colors, fonts, and images. Focus on clean, responsive design with smooth interactions.
+Our task is to create a personal portfolio website that showcases my work and skills using HTML, CSS, and JavaScript. This is my chance to build a site that reflects my style—my colors, fonts, and images. Focus on clean, responsive design with smooth interactions.
 
 ### Requirements
 
