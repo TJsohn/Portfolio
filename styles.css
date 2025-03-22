@@ -59,7 +59,7 @@ body {
 body {
   background-color: var(--primary-bg);
   color: var(--primary-text);
-  font-family: "Blinker", sans-serif;
+  font-family: "Blinker", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
