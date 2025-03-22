@@ -283,7 +283,7 @@ section:first-child {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
   max-height: 1000px;
   background-color: var(--primary-bg);
