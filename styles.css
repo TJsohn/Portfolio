@@ -56,16 +56,10 @@ body {
   --about-text-color: #e0e0e0;
 }
 
-@font-face {
-  font-family: "Blinker";
-  src: url("Blinker.woff2") format("woff2");
-  font-display: swap;
-}
-
 body {
   background-color: var(--primary-bg);
   color: var(--primary-text);
-  font-family: "Blinker", Arial, sans-serif;
+  font-family: "Blinker", sans-serif;
   font-weight: 400;
   font-style: normal;
   transition: background-color 0.3s, color 0.3s;
