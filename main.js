@@ -61,16 +61,26 @@ const displayElement = () => {
   overlay.classList.toggle("hidden");
 };
 const closeElement = () => {
-  overlay.classList.toggle("hidden");
+  if (overlay) {
+    overlay.classList.toggle("hidden");
+  } else {
+    console.error("Overlay element not found!");
+  }
 };
 const backToTop = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
-modalCloseButton.addEventListener("click", closeElement);
-modalButton.addEventListener("click", function () {
-  modal.classList.add("active");
-});
+if (modalCloseButton) {
+  modalCloseButton.addEventListener("click", closeElement);
+}
+if (modalButton) {
+  modalButton.addEventListener("click", function () {
+    if (modal) {
+      modal.classList.add("active");
+    }
+  });
+}
 modalCloseButton.addEventListener("click", function () {
   modal.classList.remove("active");
 });
@@ -88,11 +98,15 @@ document.addEventListener("DOMContentLoaded", function () {
   revealSection();
 });
 const form = document.querySelector("form");
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formData = new FormData(form);
-  for (const [key, value] of formData.entries()) {
-    console.log(`${key}: ${value}`);
-  }
-  alert("Message sent!");
-});
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(form);
+    for (const [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+    alert("Message sent!");
+  });
+} else {
+  console.warn("Form not found!");
+}
