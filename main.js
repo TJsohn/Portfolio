@@ -53,12 +53,18 @@ const applyTheme = (isDark) => {
 };
 const savedTheme = localStorage.getItem("theme") === "dark";
 applyTheme(savedTheme);
-themeToggle.addEventListener("click", () => {
-  const isDark = !document.body.classList.contains("dark");
-  applyTheme(isDark);
-});
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isDark = !document.body.classList.contains("dark");
+    applyTheme(isDark);
+  });
+}
 const displayElement = () => {
-  overlay.classList.toggle("hidden");
+  if (overlay) {
+    overlay.classList.toggle("hidden");
+  } else {
+    console.error("Overlay element not found!");
+  }
 };
 const closeElement = () => {
   if (overlay) {
@@ -71,19 +77,37 @@ const backToTop = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
-if (modalCloseButton) {
-  modalCloseButton.addEventListener("click", closeElement);
+if (document.getElementById("hero")) {
+  console.log("Main page detected!");
+  if (modalCloseButton) {
+    modalCloseButton.addEventListener("click", closeElement);
+  }
+
+  if (modalButton) {
+    modalButton.addEventListener("click", function () {
+      if (modal) {
+        modal.classList.add("active");
+      }
+    });
+  }
+
+  if (modalCloseButton && modal) {
+    modalCloseButton.addEventListener("click", function () {
+      modal.classList.remove("active");
+    });
+  }
+  const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      for (const [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+      }
+      alert("Message sent!");
+    });
+  }
 }
-if (modalButton) {
-  modalButton.addEventListener("click", function () {
-    if (modal) {
-      modal.classList.add("active");
-    }
-  });
-}
-modalCloseButton.addEventListener("click", function () {
-  modal.classList.remove("active");
-});
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const revealSection = () => {
@@ -97,16 +121,3 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", revealSection);
   revealSection();
 });
-const form = document.querySelector("form");
-if (form) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const formData = new FormData(form);
-    for (const [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
-    }
-    alert("Message sent!");
-  });
-} else {
-  console.warn("Form not found!");
-}
