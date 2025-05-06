@@ -62,6 +62,25 @@ body,
 html {
   font-family: "Blinker", sans-serif;
 }
+body,
+#menu,
+#main-nav,
+.modal,
+.hero,
+section {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark #menu {
+  background-color: #121212;
+  color: #fff;
+}
+body.dark #menu a {
+  color: #eee;
+}
+body.dark .modal {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
 h1,
 h2,
 h3,
@@ -159,6 +178,10 @@ header,
 }
 #main-nav {
   margin-left: auto;
+  transition: transform 0.3s ease;
+  transform: translateY(-100%);
+  position: absolute;
+  top: 0;
 }
 #main-nav.active {
   display: block;
@@ -167,6 +190,7 @@ header,
   right: 0;
   width: 100px;
   box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  transform: translateY(0);
 }
 #main-nav ul {
   display: flex;
