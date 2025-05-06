@@ -763,7 +763,8 @@ footer h3 {
     margin-top: 10px;
   }
   .about img {
-    size: 1rem;
+    width: 1rem;
+    height: auto;
     margin-bottom: 10px;
   }
   #backToTopBtn {
